@@ -49,6 +49,8 @@ export default function Hero() {
 }
 
 const Section = styled.section`
+background-color:white;
+
 .btns{
   display: flex;
     justify-content: space-around;
@@ -172,7 +174,7 @@ const Section = styled.section`
       background-color: palegreen;
       img {
         height: 100%;
-        height:70vh;
+        height:90vh;
       }
     }
     .content {

@@ -4,29 +4,43 @@ import service1 from "../assets/service1.png";
 import service2 from "../assets/service2.png";
 import service3 from "../assets/service3.png";
 import service4 from "../assets/service4.png";
+import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
+import HandymanOutlinedIcon from '@mui/icons-material/HandymanOutlined';
+import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
+const icons=[
+  <LocalShippingOutlinedIcon style={{ fontSize: '3rem', color: 'white' }} />,          
+  <Inventory2OutlinedIcon style={{ fontSize: '3rem', color: 'white' }} />,          
 
+  <HandymanOutlinedIcon style={{ fontSize: '3rem', color: 'white' }} />,          
+
+  <CleaningServicesOutlinedIcon style={{ fontSize: '3rem', color: 'white' }} />,          
+
+
+];
 export default function Services() {
   const data = [
   
     {
-      icon: service1,
+      icon: 0,
       subTitle:
         "Packing and unpacking services",
+      
     },
     {
-      icon: service3,
+      icon: 1,
       subTitle:
         "Transportation of belongings to the new home",
     },
     {
-      icon: service4,
+      icon: 2,
       subTitle:
         "Assembly and disassembly of furniture",
     },
     {
-      icon: service4,
+      icon: 3,
       subTitle:
-        "Assembly and disassembly of furniture",
+        "Cleaning the new home",
     },
   ];
   return (
@@ -35,9 +49,8 @@ export default function Services() {
         return (
           <div className="service">
             <div className="icon">
-              <img src={service.icon} alt="" />
-            </div>
-            <h3>{service.title}</h3>
+{              icons[service.icon]
+}              </div>
             <p>{service.subTitle}</p>
           </div>
         );
@@ -50,6 +63,9 @@ const Section = styled.section`
   padding: 5rem 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  p{
+    color:white;
+  }
   gap: 1rem;
   .service {
     display: flex;
@@ -59,7 +75,7 @@ margin-right:1rem;
     flex-direction: column;
     gap: 1rem;
     padding: 2rem;
-    background-color: rgb(186, 214, 238);;
+    background-color: #4854A1;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 0.3s ease-in-out;
     &:hover {

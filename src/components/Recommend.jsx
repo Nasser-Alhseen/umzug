@@ -1,17 +1,25 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Destination1 from "../assets/moving.jpg";
+import Destination2 from "../assets/unpacking2.jpg";
+
+import Destination3 from "../assets/unpcking.jpg";
+
 
 
 export default function Recommend() {
   const data = [
     {
       image: Destination1,
-  
+
     },
     {
-      image: Destination1,
- 
+      image: Destination2,
+
+    },
+    {
+      image: Destination2,
+
     },
     {
       image: Destination1,
@@ -19,7 +27,11 @@ export default function Recommend() {
     },
     {
       image: Destination1,
-  
+
+    },
+    {
+      image: Destination2,
+
     },
 
   ];
@@ -56,8 +68,8 @@ export default function Recommend() {
           return (
             <div className="destination">
               <img src={destination.image} alt="" />
-             
-              
+
+
             </div>
           );
         })}
@@ -99,6 +111,7 @@ const Section = styled.section`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+    margin:1rem;
     padding: 0 3rem;
     .destination {
       display: flex;
