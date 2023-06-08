@@ -174,7 +174,7 @@ background-color:white;
       background-color: palegreen;
       img {
         height: 100%;
-        height:90vh;
+        height:70vh;
       }
     }
     .content {
